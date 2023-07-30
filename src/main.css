@@ -1,0 +1,7 @@
+body {
+  width: 100%; /* <-- just to show you the scrollbar */
+  height: 100vh;
+  /* overflow-x: hidden;<-- no need */
+  /* overflow-y: scroll;<-- no need */
+  scroll-behavior: smooth;
+}
