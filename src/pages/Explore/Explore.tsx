@@ -66,8 +66,8 @@ export default function Explore() {
 
   return (
     <Flex flex={1} flexDirection={"column"} padding={"4"}>
-      {/* Search bar */}
       <Flex flex={1} flexDirection="column">
+        {/* Search bar */}
         <HStack flex={1}>
           <Flex flex={2}>
             <InputGroup>
