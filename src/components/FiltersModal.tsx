@@ -87,7 +87,7 @@ export default function FiltersModal({
   return (
     <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={handleClose}>
       <ModalOverlay />
-      <ModalContent>
+      <ModalContent margin={"4"}>
         <ModalHeader>Filters</ModalHeader>
         <ModalCloseButton />
         <ModalBody>

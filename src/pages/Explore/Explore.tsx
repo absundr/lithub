@@ -2,6 +2,8 @@ import {
   Button,
   Flex,
   HStack,
+  Icon,
+  IconButton,
   Input,
   InputGroup,
   InputLeftElement,
@@ -69,7 +71,7 @@ export default function Explore() {
       <Flex flex={1} flexDirection="column">
         {/* Search bar */}
         <HStack flex={1}>
-          <Flex flex={2}>
+          <Flex flex={[3, 2]}>
             <InputGroup>
               <InputLeftElement pointerEvents="none" h="full" paddingLeft={"4"}>
                 <BsSearch />
@@ -83,8 +85,22 @@ export default function Explore() {
               />
             </InputGroup>
           </Flex>
-          <Flex flex={1}>
+          <Flex flex={[0.5, 1]}>
+            <IconButton
+              display={{ base: "block", sm: "none", md: "none" }}
+              colorScheme={"purple"}
+              variant={"solid"}
+              aria-label="Filters"
+              icon={
+                <Icon fontSize={"24px"}>
+                  <FaTools />
+                </Icon>
+              }
+              onClick={onOpen}
+              size={"lg"}
+            />
             <Button
+              display={{ base: "none", sm: "block", md: "block" }}
               leftIcon={<FaTools />}
               colorScheme={"purple"}
               variant={"solid"}
@@ -95,6 +111,7 @@ export default function Explore() {
               Filters
             </Button>
             <Button
+              display={{ base: "none", md: "block" }}
               colorScheme={"purple"}
               variant={"ghost"}
               size={"lg"}

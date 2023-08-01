@@ -48,6 +48,11 @@ export default function Pagination({
     setPage(updatedPage);
     handleChange(updatedPage);
   };
+
+  if (!totalPages) {
+    return <></>;
+  }
+
   return (
     <HStack justify={"center"} align={"center"}>
       <Link onClick={() => handleClick(page - 1)}>
